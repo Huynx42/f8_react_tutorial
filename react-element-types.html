@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <p>Add React to Website !</p>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        // PostItem.js
+        function PostItem() {
+            return (
+                <div className="posts-item">
+                    <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/3930/62b7ef8ce02a3.png" alt="Chuyện cũ xưa: Nên dùng"/>
+                    <h2 className="post-title">C#(.NET) - Tương tác với...</h2>
+                    <p className="post-desc">Bạn có kiến thức môn lập trình</p>
+                    <p className="post-published">Một ngày trước </p>
+                </div>
+            )
+        }
+
+        // App.js
+        function App() {
+            return (
+                <div id="wrapper">
+                    <PostItem/>
+                    <PostItem/>
+                    <PostItem/>
+                </div>
+            )
+        }
+
+    // index.js
+    ReactDOM.render(<App />, document.getElementById('root'))
+
+    </script>
+</body>
+</html>

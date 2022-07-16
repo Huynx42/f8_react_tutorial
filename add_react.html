@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+</head>
+<body>
+    <p>Add React to Website !</p>
+    <script>
+        //DOM
+        const ulDOM = document.createElement('ul')
+        ulDOM.id = 'ul-id'
+        ulDOM.style = 'color: read;font-size: 30px'
+        const liDOM1 =document.createElement('li')
+        liDOM1.innerText = 'JS'
+        liDOM1.id = 'li-1'
+
+        const liDOM2 =document.createElement('li')
+        liDOM2.innerText = 'RRR'
+
+        ulDOM.appendChild(liDOM1)
+        ulDOM.appendChild(liDOM2)
+
+        document.body.appendChild(ulDOM)
+        //React
+        const ulReact =React.createElement(
+            'ul',
+            {
+                id: 'ul-id',
+                style: 'color: read;font-size: 30px',
+            },
+            React.createElement('li',{id: 'li-1'},'JSSS'),
+            React.createElement('li',null,'RSSS'),
+        )
+    </script>
+</body>
+</html>
